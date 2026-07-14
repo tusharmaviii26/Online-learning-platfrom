@@ -1122,23 +1122,7 @@
     </div>
 
     <script>
-        // ============================================================
-        //  CLEANUP: Remove any cached "Digital Marketing" data
-        // ============================================================
-        try {
-            const stored = localStorage.getItem('learnhub_data');
-            if (stored) {
-                const parsed = JSON.parse(stored);
-                if (parsed.courses) {
-                    parsed.courses = parsed.courses.filter(c => 
-                        c && c.category !== 'Digital Marketing'
-                    );
-                    localStorage.setItem('learnhub_data', JSON.stringify(parsed));
-                }
-            }
-        } catch (e) {
-            console.warn('Cleanup error:', e);
-        }
+     
 
         // ============================================================
         //  LOGO.DEV CONFIGURATION
