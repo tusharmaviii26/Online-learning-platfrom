@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -65,20 +66,24 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
         * {
             font-family: 'Outfit', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             transition: background-color 0.3s, color 0.3s;
             background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
             min-height: 100vh;
         }
+
         .dark body {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         }
+
         h1,
         h2,
         h3,
@@ -87,40 +92,57 @@
         h6 {
             letter-spacing: -0.01em;
         }
+
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: transparent;
         }
+
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             border-radius: 20px;
         }
+
         .dark ::-webkit-scrollbar-thumb {
             background: linear-gradient(135deg, #818cf8, #a78bfa);
         }
+
         .navbar-glass {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(16px) saturate(180%);
             -webkit-backdrop-filter: blur(16px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
+
         .dark .navbar-glass {
             background: rgba(15, 23, 42, 0.7);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .hero-gradient {
             background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 40%, #ec4899 70%, #f59e0b 100%);
             background-size: 300% 300%;
             animation: gradientShift 10s ease infinite;
         }
+
         @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
+
         .btn-glass-primary {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(12px) saturate(180%);
@@ -136,15 +158,18 @@
             text-decoration: none;
             display: inline-block;
         }
+
         .btn-glass-primary:hover {
             background: rgba(255, 255, 255, 0.3);
             border-color: rgba(255, 255, 255, 0.6);
             transform: scale(1.02);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
+
         .btn-glass-primary:active {
             transform: scale(0.98);
         }
+
         .btn-glass-secondary {
             background: rgba(255, 255, 255, 0.06);
             backdrop-filter: blur(12px) saturate(180%);
@@ -159,31 +184,38 @@
             text-decoration: none;
             display: inline-block;
         }
+
         .btn-glass-secondary:hover {
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.5);
             transform: scale(1.02);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
+
         .btn-glass-secondary:active {
             transform: scale(0.98);
         }
+
         .dark .btn-glass-primary {
             background: rgba(255, 255, 255, 0.08);
             border-color: rgba(255, 255, 255, 0.15);
         }
+
         .dark .btn-glass-primary:hover {
             background: rgba(255, 255, 255, 0.18);
             border-color: rgba(255, 255, 255, 0.3);
         }
+
         .dark .btn-glass-secondary {
             background: rgba(255, 255, 255, 0.04);
             border-color: rgba(255, 255, 255, 0.12);
         }
+
         .dark .btn-glass-secondary:hover {
             background: rgba(255, 255, 255, 0.12);
             border-color: rgba(255, 255, 255, 0.25);
         }
+
         .card-modern {
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(8px);
@@ -191,18 +223,22 @@
             transition: all 0.3s ease;
             box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
         }
+
         .dark .card-modern {
             background: rgba(30, 41, 59, 0.6);
             border-color: rgba(255, 255, 255, 0.05);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
+
         .card-modern:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
         }
+
         .dark .card-modern:hover {
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
+
         .btn-primary-modern {
             background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
             color: white;
@@ -214,18 +250,22 @@
             cursor: pointer;
             box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
         }
+
         .btn-primary-modern:hover {
             transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
         }
+
         .btn-primary-modern:active {
             transform: scale(0.98);
         }
+
         .btn-primary-modern:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
         }
+
         .btn-secondary-modern {
             background: transparent;
             color: #6366f1;
@@ -236,20 +276,24 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
         .btn-secondary-modern:hover {
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             border-color: transparent;
         }
+
         .dark .btn-secondary-modern {
             color: #818cf8;
             border-color: #818cf8;
         }
+
         .dark .btn-secondary-modern:hover {
             background: linear-gradient(135deg, #818cf8, #a78bfa);
             color: #0f172a;
             border-color: transparent;
         }
+
         .input-modern {
             width: 100%;
             padding: 14px 18px;
@@ -261,20 +305,24 @@
             font-size: 14px;
             color: #1e293b;
         }
+
         .dark .input-modern {
             background: rgba(30, 41, 59, 0.6);
             border-color: #334155;
             color: #f1f5f9;
         }
+
         .input-modern:focus {
             outline: none;
             border-color: #6366f1;
             box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
         }
+
         .dark .input-modern:focus {
             border-color: #818cf8;
             box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15);
         }
+
         .badge-modern {
             display: inline-block;
             padding: 6px 14px;
@@ -283,54 +331,67 @@
             font-weight: 600;
             letter-spacing: 0.02em;
         }
+
         .badge-blue-modern {
             background: #e0e7ff;
             color: #4338ca;
         }
+
         .dark .badge-blue-modern {
             background: #1e1b4b;
             color: #818cf8;
         }
+
         .badge-green-modern {
             background: #d1fae5;
             color: #065f46;
         }
+
         .dark .badge-green-modern {
             background: #064e3b;
             color: #34d399;
         }
+
         .badge-purple-modern {
             background: #ede9fe;
             color: #5b21b6;
         }
+
         .dark .badge-purple-modern {
             background: #2e1065;
             color: #a78bfa;
         }
+
         .badge-red-modern {
             background: #fee2e2;
             color: #991b1b;
         }
+
         .dark .badge-red-modern {
             background: #7f1d1d;
             color: #fca5a5;
         }
+
         .badge-yellow-modern {
             background: #fef3c7;
             color: #92400e;
         }
+
         .dark .badge-yellow-modern {
             background: #78350f;
             color: #fcd34d;
         }
+
         .badge-pink-modern {
             background: #fce7f3;
             color: #9d174d;
         }
+
         .dark .badge-pink-modern {
             background: #831843;
             color: #f472b6;
         }
+
         .course-card-modern {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(8px);
@@ -340,33 +401,40 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 8px 30px rgba(99, 102, 241, 0.06);
         }
+
         .dark .course-card-modern {
             background: rgba(30, 41, 59, 0.6);
             border-color: rgba(255, 255, 255, 0.05);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
+
         .course-card-modern:hover {
             transform: translateY(-6px);
             box-shadow: 0 25px 50px rgba(99, 102, 241, 0.1);
         }
+
         .dark .course-card-modern:hover {
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
         }
+
         .progress-modern {
             height: 6px;
             background: #e2e8f0;
             border-radius: 9999px;
             overflow: hidden;
         }
+
         .dark .progress-modern {
             background: #334155;
         }
+
         .progress-modern-fill {
             height: 100%;
             background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
             border-radius: 9999px;
             transition: width 0.6s ease;
         }
+
         .profile-edit-card {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(12px);
@@ -375,10 +443,12 @@
             padding: 28px;
             margin-top: 20px;
         }
+
         .dark .profile-edit-card {
             background: rgba(30, 41, 59, 0.5);
             border-color: rgba(255, 255, 255, 0.05);
         }
+
         .toast-modern {
             position: fixed;
             bottom: 30px;
@@ -396,19 +466,24 @@
             max-width: 420px;
             font-weight: 500;
         }
+
         .toast-modern.show {
             transform: translateY(0);
             opacity: 1;
         }
+
         .toast-modern.success {
             background: linear-gradient(135deg, #059669, #34d399);
         }
+
         .toast-modern.error {
             background: linear-gradient(135deg, #dc2626, #f87171);
         }
+
         .toast-modern.info {
             background: linear-gradient(135deg, #4f46e5, #818cf8);
         }
+
         .mobile-menu-modern {
             position: fixed;
             top: 0;
@@ -425,6 +500,7 @@
             padding: 30px 24px;
             overflow-y: auto;
         }
+
         .dark .mobile-menu-modern {
             background: rgba(15, 23, 42, 0.4);
             backdrop-filter: blur(24px) saturate(180%);
@@ -432,9 +508,11 @@
             border-left: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: -8px 0 40px rgba(0, 0, 0, 0.3);
         }
+
         .mobile-menu-modern.open {
             right: 0;
         }
+
         .mobile-menu-modern .nav-link {
             display: block;
             padding: 12px 16px;
@@ -447,20 +525,24 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             margin-bottom: 4px;
         }
+
         .dark .mobile-menu-modern .nav-link {
             color: #e2e8f0;
             background: rgba(255, 255, 255, 0.03);
             border-color: rgba(255, 255, 255, 0.04);
         }
+
         .mobile-menu-modern .nav-link:hover {
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.2);
             transform: translateX(4px);
         }
+
         .dark .mobile-menu-modern .nav-link:hover {
             background: rgba(255, 255, 255, 0.08);
             border-color: rgba(255, 255, 255, 0.1);
         }
+
         .mobile-menu-modern .sidebar-logo {
             font-size: 1.5rem;
             font-weight: 800;
@@ -469,6 +551,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .mobile-menu-modern .close-btn {
             padding: 8px;
             border-radius: 50%;
@@ -479,15 +562,18 @@
             cursor: pointer;
             color: #1e293b;
         }
+
         .dark .mobile-menu-modern .close-btn {
             color: #e2e8f0;
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.05);
         }
+
         .mobile-menu-modern .close-btn:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: rotate(90deg);
         }
+
         .overlay-modern {
             position: fixed;
             top: 0;
@@ -499,28 +585,35 @@
             z-index: 999;
             display: none;
         }
+
         .overlay-modern.show {
             display: block;
         }
+
         .page {
             display: none;
         }
+
         .page.active {
             display: block;
         }
+
         .fade-in-modern {
             animation: fadeInUp 0.6s ease forwards;
         }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .stat-card {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(8px);
@@ -529,29 +622,35 @@
             border: 1px solid rgba(255, 255, 255, 0.15);
             transition: all 0.3s ease;
         }
+
         .dark .stat-card {
             background: rgba(30, 41, 59, 0.4);
             border-color: rgba(255, 255, 255, 0.05);
         }
+
         .stat-card:hover {
             transform: scale(1.02);
             box-shadow: 0 12px 30px rgba(99, 102, 241, 0.08);
         }
+
         .dark .stat-card:hover {
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
+
         .gradient-text {
             background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .gradient-text-alt {
             background: linear-gradient(135deg, #f59e0b, #ec4899, #6366f1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .quiz-option-modern {
             padding: 14px 20px;
             border-radius: 16px;
@@ -561,43 +660,53 @@
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(4px);
         }
+
         .dark .quiz-option-modern {
             border-color: #334155;
             background: rgba(30, 41, 59, 0.3);
             color: #f1f5f9;
         }
+
         .quiz-option-modern:hover {
             border-color: #6366f1;
             background: rgba(99, 102, 241, 0.05);
         }
+
         .dark .quiz-option-modern:hover {
             border-color: #818cf8;
             background: rgba(129, 140, 248, 0.05);
         }
+
         .quiz-option-modern.selected {
             border-color: #6366f1;
             background: rgba(99, 102, 241, 0.15);
         }
+
         .dark .quiz-option-modern.selected {
             border-color: #818cf8;
             background: rgba(129, 140, 248, 0.15);
         }
+
         .quiz-option-modern.correct {
             border-color: #10b981;
             background: rgba(16, 185, 129, 0.15);
         }
+
         .dark .quiz-option-modern.correct {
             border-color: #34d399;
             background: rgba(52, 211, 153, 0.15);
         }
+
         .quiz-option-modern.wrong {
             border-color: #ef4444;
             background: rgba(239, 68, 68, 0.15);
         }
+
         .dark .quiz-option-modern.wrong {
             border-color: #f87171;
             background: rgba(248, 113, 113, 0.15);
         }
+
         .certificate-modern {
             border: 4px double #6366f1;
             padding: 40px;
@@ -607,10 +716,12 @@
             backdrop-filter: blur(8px);
             box-shadow: 0 20px 60px rgba(99, 102, 241, 0.08);
         }
+
         .dark .certificate-modern {
             background: rgba(30, 41, 59, 0.4);
             border-color: #818cf8;
         }
+
         .certificate-modern::before {
             content: '✦';
             position: absolute;
@@ -622,10 +733,12 @@
             font-size: 24px;
             color: #6366f1;
         }
+
         .dark .certificate-modern::before {
             background: #0f172a;
             color: #818cf8;
         }
+
         .video-modal {
             position: fixed;
             top: 0;
@@ -639,9 +752,11 @@
             justify-content: center;
             z-index: 9999;
         }
+
         .video-modal.show {
             display: flex;
         }
+
         .video-modal .video-container {
             background: rgba(0, 0, 0, 0.8);
             border-radius: 24px;
@@ -650,11 +765,13 @@
             max-height: 80%;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
+
         .video-modal .video-container video {
             width: 100%;
             max-height: 70vh;
             border-radius: 16px;
         }
+
         .video-modal .close-video {
             position: absolute;
             top: 20px;
@@ -664,14 +781,17 @@
             cursor: pointer;
             transition: transform 0.2s;
         }
+
         .video-modal .close-video:hover {
             transform: rotate(90deg);
         }
+
         .avatar-upload {
             position: relative;
             display: inline-block;
             cursor: pointer;
         }
+
         .avatar-upload input[type="file"] {
             position: absolute;
             top: 0;
@@ -681,6 +801,7 @@
             opacity: 0;
             cursor: pointer;
         }
+
         .avatar-upload .avatar-overlay {
             position: absolute;
             top: 0;
@@ -698,9 +819,11 @@
             font-size: 12px;
             font-weight: 500;
         }
+
         .avatar-upload:hover .avatar-overlay {
             opacity: 1;
         }
+
         #global-error {
             display: none;
             background: #fef2f2;
@@ -711,9 +834,11 @@
             border: 1px solid #fecaca;
             text-align: center;
         }
+
         #global-error.show {
             display: block;
         }
+
         .dark #global-error {
             background: #7f1d1d;
             color: #fca5a5;
@@ -736,19 +861,23 @@
             justify-content: center;
             min-height: 140px;
         }
+
         .dark .alumni-card {
             background: rgba(30, 41, 59, 0.4);
             border-color: rgba(255, 255, 255, 0.05);
         }
+
         .alumni-card:hover {
             transform: translateY(-6px) scale(1.03);
             box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
             border-color: #6366f1;
         }
+
         .dark .alumni-card:hover {
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border-color: #818cf8;
         }
+
         .alumni-card .student-img {
             width: 48px;
             height: 48px;
@@ -758,33 +887,41 @@
             transition: all 0.3s ease;
             margin-bottom: 4px;
         }
+
         .alumni-card:hover .student-img {
             border-color: #6366f1;
             transform: scale(1.05);
         }
+
         .dark .alumni-card .student-img {
             border-color: rgba(129, 140, 248, 0.2);
         }
+
         .dark .alumni-card:hover .student-img {
             border-color: #818cf8;
         }
+
         .alumni-card .alumni-name {
             font-weight: 700;
             font-size: 0.75rem;
             color: #1e293b;
             margin-top: 2px;
         }
+
         .dark .alumni-card .alumni-name {
             color: #f1f5f9;
         }
+
         .alumni-card .alumni-role {
             font-size: 0.6rem;
             color: #64748b;
             font-weight: 500;
         }
+
         .dark .alumni-card .alumni-role {
             color: #94a3b8;
         }
+
         .alumni-card .alumni-company {
             font-size: 0.55rem;
             padding: 2px 8px;
@@ -799,10 +936,12 @@
             justify-content: center;
             gap: 4px;
         }
+
         .dark .alumni-card .alumni-company {
             background: rgba(129, 140, 248, 0.12);
             color: #818cf8;
         }
+
         .alumni-card .alumni-company .company-icon {
             width: 14px;
             height: 14px;
@@ -811,6 +950,7 @@
             background: white;
             padding: 2px;
         }
+
         .dark .alumni-card .alumni-company .company-icon {
             background: #1e293b;
         }
@@ -822,9 +962,11 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
+
         .alumni-stats .stat-item {
             text-align: center;
         }
+
         .alumni-stats .stat-number {
             font-size: 2rem;
             font-weight: 800;
@@ -833,14 +975,17 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .alumni-stats .stat-label {
             font-size: 0.8rem;
             color: #64748b;
             font-weight: 500;
         }
+
         .dark .alumni-stats .stat-label {
             color: #94a3b8;
         }
+
         .download-report-btn {
             background: linear-gradient(135deg, #f59e0b, #ec4899);
             color: white;
@@ -855,6 +1000,7 @@
             align-items: center;
             gap: 8px;
         }
+
         .download-report-btn:hover {
             transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
@@ -868,6 +1014,7 @@
             margin-top: 40px;
             color: #94a3b8;
         }
+
         .footer-new .footer-title {
             color: #f1f5f9;
             font-weight: 700;
@@ -875,6 +1022,7 @@
             margin-bottom: 16px;
             letter-spacing: 0.5px;
         }
+
         .footer-new .footer-link {
             color: #94a3b8;
             text-decoration: none;
@@ -884,14 +1032,17 @@
             font-size: 0.9rem;
             cursor: pointer;
         }
+
         .footer-new .footer-link:hover {
             color: #a78bfa;
             transform: translateX(4px);
         }
+
         .footer-new .footer-divider {
             border-top: 1px solid rgba(255, 255, 255, 0.06);
             margin: 30px 0 20px;
         }
+
         .footer-new .brand-logo {
             font-size: 1.8rem;
             font-weight: 900;
@@ -900,11 +1051,13 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .footer-new .brand-sub {
             color: #64748b;
             font-size: 0.85rem;
             margin-top: 4px;
         }
+
         .footer-new .contact-item {
             display: flex;
             align-items: center;
@@ -912,11 +1065,13 @@
             padding: 6px 0;
             font-size: 0.9rem;
         }
+
         .footer-new .contact-item svg {
             width: 18px;
             height: 18px;
             flex-shrink: 0;
         }
+
         .footer-new .offering-item {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -925,30 +1080,36 @@
             transition: all 0.3s ease;
             cursor: default;
         }
+
         .footer-new .offering-item:hover {
             background: rgba(255, 255, 255, 0.08);
             border-color: rgba(167, 139, 250, 0.2);
             transform: translateY(-2px);
         }
+
         .footer-new .offering-item .main {
             color: #f1f5f9;
             font-weight: 600;
             font-size: 0.95rem;
         }
+
         .footer-new .offering-item .sub {
             color: #64748b;
             font-size: 0.75rem;
             letter-spacing: 0.3px;
         }
+
         .footer-new .copyright {
             font-size: 0.85rem;
             color: #475569;
         }
+
         .footer-new .copyright .heart {
             color: #ec4899;
             display: inline-block;
             animation: heartbeat 1.5s ease-in-out infinite;
         }
+
         .footer-new .copyright .credit-name {
             background: linear-gradient(135deg, #a78bfa, #f472b6);
             -webkit-background-clip: text;
@@ -956,15 +1117,33 @@
             background-clip: text;
             font-weight: 600;
         }
+
         @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            14% { transform: scale(1.2); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.2); }
-            70% { transform: scale(1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            14% {
+                transform: scale(1.2);
+            }
+
+            28% {
+                transform: scale(1);
+            }
+
+            42% {
+                transform: scale(1.2);
+            }
+
+            70% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div id="global-error"></div>
@@ -991,15 +1170,20 @@
                     </div>
                     <div id="desktop-nav" class="hidden md:flex items-center gap-8"></div>
                     <div class="flex items-center gap-3">
-                        <button id="dark-toggle" class="p-2.5 rounded-full hover:bg-slate-200/60 dark:hover:bg-dark-300/60 transition-colors">
-                            <svg id="dark-icon" class="w-5 h-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20">
+                        <button id="dark-toggle"
+                            class="p-2.5 rounded-full hover:bg-slate-200/60 dark:hover:bg-dark-300/60 transition-colors">
+                            <svg id="dark-icon" class="w-5 h-5 text-slate-700 dark:text-slate-300" fill="currentColor"
+                                viewBox="0 0 20 20">
                                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                             </svg>
                         </button>
                         <div id="auth-buttons" class="flex items-center gap-2"></div>
-                        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-dark-300/60 transition-colors">
-                            <svg class="w-6 h-6 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <button id="mobile-menu-btn"
+                            class="md:hidden p-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-dark-300/60 transition-colors">
+                            <svg class="w-6 h-6 dark:text-slate-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
                     </div>
@@ -1012,7 +1196,8 @@
                 <span class="sidebar-logo">LearnHub</span>
                 <button id="mobile-close" class="close-btn">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -1037,20 +1222,22 @@
         <footer class="footer-new">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-                    
+
                     <div class="lg:col-span-1">
                         <div class="brand-logo">LearnHub</div>
                         <div class="brand-sub">Online Learning Platform</div>
                         <div class="mt-4 space-y-2">
                             <div class="contact-item">
                                 <svg class="text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
                                 <span>1800-123-3598</span>
                             </div>
                             <div class="contact-item">
                                 <svg class="text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 <span>contact@learnhub.com</span>
                             </div>
@@ -1109,7 +1296,7 @@
 
                 <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                     <p class="copyright">
-                        Copyright © Developed by — 
+                        Copyright © Developed by —
                         <span class="credit-name">TUSHAR MAVI</span>
                     </p>
                     <p class="copyright flex items-center gap-1">
@@ -1122,7 +1309,23 @@
     </div>
 
     <script>
-     
+        // ============================================================
+        //  CLEANUP: Remove any cached "Digital Marketing" data
+        // ============================================================
+        try {
+            const stored = localStorage.getItem('learnhub_data');
+            if (stored) {
+                const parsed = JSON.parse(stored);
+                if (parsed.courses) {
+                    parsed.courses = parsed.courses.filter(c =>
+                        c && c.category !== 'Digital Marketing'
+                    );
+                    localStorage.setItem('learnhub_data', JSON.stringify(parsed));
+                }
+            }
+        } catch (e) {
+            console.warn('Cleanup error:', e);
+        }
 
         // ============================================================
         //  LOGO.DEV CONFIGURATION
@@ -1452,7 +1655,40 @@
             published: true,
             createdAt: '2025-07-01',
             liveClasses: []
-     }];
+        },
+        // NEW Digital Marketing Course with specific image
+        {
+            id: 'c12',
+            title: 'Digital Marketing Mastery',
+            instructor: 'Marketing Pro',
+            instructorId: 'u4',
+            description: 'Master SEO, SEM, Social Media Marketing, Email Marketing, Content Strategy, and Analytics.',
+            category: 'Marketing',
+            level: 'Intermediate',
+            rating: 4.8,
+            reviews: 423,
+            students: 3200,
+            price: 79.99,
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D',
+            duration: '30 hours',
+            lectures: 110,
+            progress: 0,
+            enrolled: false,
+            completed: false,
+            sections: [
+                { title: 'Marketing Fundamentals', lectures: ['Intro', 'Strategy', 'Analytics'] },
+                { title: 'SEO & SEM', lectures: ['Keywords', 'On-Page', 'Paid Ads'] },
+                { title: 'Social Media', lectures: ['Facebook', 'Instagram', 'LinkedIn'] },
+                { title: 'Email & Content', lectures: ['Email Marketing', 'Content Strategy'] }
+            ],
+            pdfs: ['marketing-guide.pdf', 'seo-checklist.pdf'],
+            assignments: ['SEO Audit', 'Social Media Campaign', 'Marketing Plan'],
+            published: true,
+            createdAt: '2025-07-10',
+            liveClasses: [
+                { title: 'Marketing Strategy Session', date: '2025-07-25 11:00 AM', link: 'https://meet.example.com/marketing' }
+            ]
+        }];
 
         const INITIAL_QUIZZES = [{
             id: 'q1',
@@ -1970,19 +2206,19 @@
         // ============================================================
         //  ADMIN COURSE MANAGEMENT FUNCTIONS
         // ============================================================
-        
+
         // Admin can add a course (works like teacher create but with admin privileges)
         function adminAddCourse(courseData) {
             const user = getCurrentUser();
-            if (!user || user.role !== 'admin') { 
-                showToast('Only admins can add courses from here', 'error'); 
-                return false; 
+            if (!user || user.role !== 'admin') {
+                showToast('Only admins can add courses from here', 'error');
+                return false;
             }
-            
+
             // If instructor is not specified, use admin as instructor
             const instructorName = courseData.instructor || user.name;
             const instructorId = courseData.instructorId || user.id;
-            
+
             let sections = [];
             if (courseData.sectionsInput) {
                 sections = courseData.sectionsInput.split('\n').filter(s => s.trim()).map(s => {
@@ -1990,7 +2226,7 @@
                     return { title: parts[0] || 'Section', lectures: parts[1] ? parts[1].split(',').map(l => l.trim()) : ['Lecture 1'] };
                 });
             }
-            
+
             const newCourse = {
                 id: 'c' + Date.now(),
                 ...courseData,
@@ -2008,7 +2244,7 @@
                 liveClasses: courseData.liveClasses || []
             };
             state.courses.push(newCourse);
-            
+
             // If instructor is a teacher, add to their courses list
             if (instructorId !== user.id) {
                 const teacher = state.users.find(u => u.id === instructorId && u.role === 'teacher');
@@ -2017,7 +2253,7 @@
                     teacher.courses.push(newCourse.id);
                 }
             }
-            
+
             saveState();
             showToast('Course added by admin successfully!', 'success');
             return true;
@@ -2037,9 +2273,11 @@
             if (courseData.sectionsInput) {
                 sections = courseData.sectionsInput.split('\n').filter(s => s.trim()).map(s => {
                     const parts = s.split(':').map(p => p.trim());
-                    return { title: parts[0] || 'Section', lectures: parts[1] ? parts[1].split(',').map(l => l.trim()) : [
+                    return {
+                        title: parts[0] || 'Section', lectures: parts[1] ? parts[1].split(',').map(l => l.trim()) : [
                             'Lecture 1'
-                        ] };
+                        ]
+                    };
                 });
             }
             const newCourse = {
@@ -2317,7 +2555,7 @@
             const file = event.target.files[0];
             if (!file) return;
             const reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 const dataUrl = e.target.result;
                 const user = getCurrentUser();
                 if (user) {
@@ -2459,11 +2697,29 @@
                         break;
                     default:
                         renderHome();
-            
+                }
+            } catch (e) {
+                console.error('Render error:', e);
+                showGlobalError('Error rendering page: ' + e.message);
+                showToast('Error loading page', 'error');
+                document.getElementById('page-home').classList.add('active');
+                renderHome();
             }
         }
 
-      
+        // ----- FIXED IMAGE HELPER -----
+        function getSafeImageUrl(url, fallback = 'https://placehold.co/600x400/6366f1/ffffff?text=LearnHub') {
+            if (!url) return fallback;
+            // If it's a via.placeholder.com URL, replace with placehold.co
+            if (url.includes('via.placeholder.com')) {
+                const params = new URLSearchParams(url.split('?')[1] || '');
+                const size = params.get('size') || '600x400';
+                const bg = params.get('bgcolor') || '6366f1';
+                const text = params.get('text') || 'LearnHub';
+                return `https://placehold.co/${size}/${bg}/ffffff?text=${encodeURIComponent(text)}`;
+            }
+            return url;
+        }
 
         // ----- HOME -----
         function renderHome() {
@@ -2591,7 +2847,7 @@
                                             <img src="${alumni.img}" 
                                                  alt="${alumni.name}" 
                                                  class="student-img" 
-                                                 onerror="this.src='https://ui-avatars.com/api/?name=${alumni.name.split(' ').map(n=>n[0]).join('')}&background=6366f1&color=fff&size=48'" />
+                                                 onerror="this.src='https://ui-avatars.com/api/?name=${alumni.name.split(' ').map(n => n[0]).join('')}&background=6366f1&color=fff&size=48'" />
                                             <div class="alumni-name">${alumni.name}</div>
                                             <div class="alumni-role">${alumni.role}</div>
                                             <div class="alumni-company">
@@ -2742,7 +2998,7 @@
                 const container = document.getElementById('page-courses');
                 const publishedCourses = state.courses.filter(c => c.published !== false);
                 const categories = [...new Set(state.courses.map(c => c.category).filter(cat => cat))];
-                
+
                 let html = `
                     <div class="min-h-screen py-8">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2938,7 +3194,7 @@
                                 <h4 class="font-semibold dark:text-white mb-2">Your Progress</h4>
                                 <div class="progress-modern"><div class="progress-modern-fill" style="width: ${progress}%"></div></div>
                                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">${progress}% complete</div>
-                                ${progress < 100 ? `<button onclick="updateProgress('${course.id}', ${Math.min(100, progress+10)})" class="btn-primary-modern text-sm mt-2">Mark 10% more</button>` : ''}
+                                ${progress < 100 ? `<button onclick="updateProgress('${course.id}', ${Math.min(100, progress + 10)})" class="btn-primary-modern text-sm mt-2">Mark 10% more</button>` : ''}
                             </div>
                         ` : ''}
                     </div>
@@ -2984,7 +3240,7 @@
                                     <div id="quiz-${quiz.id}" class="space-y-4">
                                         ${quiz.questions.map((q, qi) => `
                                             <div class="p-4 bg-slate-50/60 dark:bg-dark-200/40 rounded-xl">
-                                                <p class="font-medium dark:text-white mb-3">${qi+1}. ${q.question}</p>
+                                                <p class="font-medium dark:text-white mb-3">${qi + 1}. ${q.question}</p>
                                                 <div class="space-y-2">
                                                     ${q.options.map((opt, oi) => `
                                                         <div class="quiz-option-modern" data-question="${q.id}" data-option="${oi}" onclick="selectQuizOption('${quiz.id}', '${q.id}', ${oi})">
@@ -3546,14 +3802,14 @@
                         </tr></thead>
                         <tbody>
                             ${enrolledUsers.map(u => {
-                                const prog = course.progress || 0;
-                                const completed = u.completedCourses.includes(courseId);
-                                return `<tr class="border-b border-slate-100 dark:border-dark-300">
+                const prog = course.progress || 0;
+                const completed = u.completedCourses.includes(courseId);
+                return `<tr class="border-b border-slate-100 dark:border-dark-300">
                                     <td class="py-2 pr-4 dark:text-white">${u.name}</td>
                                     <td class="py-2 pr-4"><div class="progress-modern w-32"><div class="progress-modern-fill" style="width: ${prog}%"></div></div></td>
                                     <td class="py-2">${completed ? '✅' : '❌'}</td>
                                 </tr>`;
-                            }).join('')}
+            }).join('')}
                         </tbody>
                     </table>
                     <button onclick="this.closest('.fixed').remove()" class="btn-primary-modern mt-4">Close</button>
@@ -3683,13 +3939,13 @@
                                 <div class="card-modern rounded-xl p-6">
                                     <h3 class="font-semibold dark:text-white mb-3">Instructor Approvals</h3>
                                     ${pendingTeachers.length === 0 ? `<p class="text-sm text-slate-500 dark:text-slate-400">No pending approvals.</p>` :
-                                        pendingTeachers.map(t => `
+                            pendingTeachers.map(t => `
                                             <div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-dark-300">
                                                 <span class="dark:text-white">${t.name}</span>
                                                 <button onclick="approveInstructor('${t.id}')" class="btn-primary-modern text-sm py-1 px-3">Approve</button>
                                             </div>
                                         `).join('')
-                                    }
+                        }
                                 </div>
                             </div>
                         </div>
@@ -3813,7 +4069,7 @@
                         .filter(u => u.role === 'teacher' && u.approved)
                         .map(t => `<option value="${t.id}">${t.name}</option>`)
                         .join('');
-                    
+
                     html = `
                         <div class="fade-in-modern">
                             <div class="card-modern rounded-xl p-6">
@@ -3935,16 +4191,16 @@
             try {
                 const title = document.getElementById('admin-course-title')?.value.trim();
                 if (!title) { showToast('Please enter a course title', 'error'); return; }
-                
+
                 const instructorId = document.getElementById('admin-course-instructor')?.value;
                 const instructor = instructorId ? getUser(instructorId) : null;
-                
+
                 const liveInput = document.getElementById('admin-course-live')?.value || '';
                 const liveClasses = liveInput.split('\n').filter(s => s.trim()).map(s => {
                     const parts = s.split('|').map(p => p.trim());
                     return { title: parts[0] || 'Live Session', date: parts[1] || 'TBD', link: parts[2] || '#' };
                 });
-                
+
                 const courseData = {
                     title: title,
                     description: document.getElementById('admin-course-description')?.value.trim() || '',
@@ -3962,7 +4218,7 @@
                     instructor: instructor ? instructor.name : undefined,
                     instructorId: instructorId || undefined
                 };
-                
+
                 if (adminAddCourse(courseData)) {
                     switchAdminTab('courses');
                 }
@@ -4215,4 +4471,5 @@
     </script>
 
 </body>
+
 </html>
