@@ -2459,29 +2459,11 @@
                         break;
                     default:
                         renderHome();
-                }
-            } catch (e) {
-                console.error('Render error:', e);
-                showGlobalError('Error rendering page: ' + e.message);
-                showToast('Error loading page', 'error');
-                document.getElementById('page-home').classList.add('active');
-                renderHome();
+            
             }
         }
 
-        // ----- FIXED IMAGE HELPER -----
-        function getSafeImageUrl(url, fallback = 'https://placehold.co/600x400/6366f1/ffffff?text=LearnHub') {
-            if (!url) return fallback;
-            // If it's a via.placeholder.com URL, replace with placehold.co
-            if (url.includes('via.placeholder.com')) {
-                const params = new URLSearchParams(url.split('?')[1] || '');
-                const size = params.get('size') || '600x400';
-                const bg = params.get('bgcolor') || '6366f1';
-                const text = params.get('text') || 'LearnHub';
-                return `https://placehold.co/${size}/${bg}/ffffff?text=${encodeURIComponent(text)}`;
-            }
-            return url;
-        }
+      
 
         // ----- HOME -----
         function renderHome() {
